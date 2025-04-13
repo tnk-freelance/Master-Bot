@@ -36,46 +36,6 @@
       "path": "/morning-report",
       "schedule": "0 0 * * *"
     }
-  ]
-}
-{
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.12" }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/callback",
-      "methods": ["POST"],
-      "dest": "main.py"
-    },
-    {
-      "src": "/morning-report",
-      "methods": ["GET"],
-      "dest": "main.py"
-    },
-    {
-      "src": "/test-message",
-      "methods": ["GET"],
-      "dest": "main.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "main.py"
-    }
-  ],
-  "crons": [
-    {
-      "path": "/morning-report",
-      "schedule": "0 0 * * *"
-    }
   ],
   "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt"
 }
