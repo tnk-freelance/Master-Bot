@@ -1,4 +1,4 @@
-import os
+mport os
 import json
 import yfinance as yf
 from fastapi import FastAPI, Request, HTTPException
