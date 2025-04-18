@@ -1,0 +1,5 @@
+.env
+user_data.json
+*.pyc
+__pycache__/
+static/*.png
